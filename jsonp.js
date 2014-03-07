@@ -5,7 +5,7 @@
 // <http://neocotic.com/jsonp.js>
 
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) define('json2', factory);
+  if (typeof define === 'function' && define.amd) define('jsonp', factory);
   else root.JSON = factory();
 }(this, function() {
 
