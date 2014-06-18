@@ -127,7 +127,7 @@
         if (!JSONP.timeout) return;
         timers[id] = setTimeout(function() {
           cleanup(id, script);
-          error.call(context);
+          error.call(context, 'timeout');
         }, JSONP.timeout);
       })(id, script, error, context);
     }
