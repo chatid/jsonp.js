@@ -32,7 +32,7 @@
     var query = '';
     for (var key in data) {
       if (data.hasOwnProperty(key)) {
-        query += '&' + key + '=' + data[key];
+        query += '&' + key + '=' + encodeURIComponent(data[key]);
       }
     }
     return query;
