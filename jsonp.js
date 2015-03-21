@@ -53,7 +53,7 @@
   // -----------
 
   // Build the publicly exposed API.
-  var JSONP = window.__cidf_jsonp = {
+  var JSONP = CID.__jsonp = {
 
     // Public Constants
     // ----------------
@@ -112,7 +112,7 @@
       // Build query string.
       url += (url.indexOf('?') === -1) ? '?' : '&';
       url += JSONP.callbackName + '=' +
-             encodeURIComponent('__cidf_jsonp.__callbacks__[' + id + ']');
+             encodeURIComponent('CID.__jsonp.__callbacks__[' + id + ']');
       url += paramify(data);
 
       if (url.length >= 2083) return;
